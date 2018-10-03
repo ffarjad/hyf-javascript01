@@ -1,3 +1,5 @@
+//JavaScrip Exercise Week2
+//https://github.com/HackYourFuture/JavaScript1/blob/master/Week2/MAKEME.md
 //1.Write hello world
 console.log('Hello world!');
 
