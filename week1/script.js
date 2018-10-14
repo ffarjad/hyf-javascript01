@@ -26,10 +26,11 @@ console.log(y);
 //5.maximum number
 var z = 7.25;
 console.log(z);
-var a = parseInt(7.25);
+// var a = parseInt(7.25);
+var a = Math.round(z);
 console.log(a);
 var highest_value = Math.max(a, z); 
-console.log("the highest value between " + z + " and " + parseInt(z) + " is " + highest_value);
+console.log("the highest value between " + z + " and " + a + " is " + highest_value);
 
 //6.Arrays
 var elements = [];
@@ -103,3 +104,4 @@ var array = ['HackYourFuture', 80 , "FooCafe", 199.95]
 console.log(array);
 console.log(typeof(7/0));
 console.log((7/0) === (6/0));
+console.log(7/0);

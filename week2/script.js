@@ -26,10 +26,11 @@ console.log("favoriteAnimals after deleting meerkat is : " + favoriteAnimals);
 
 //Functions
 //1.Sum
-function Sum(num1, num2, num3) {
-    return num1+num2+num3;
+function Sum(val1, val2, val3) {
+    return val1+val2+val3;
   }
-  console.log("Sum(1,2,3) =  " + Sum(1,2,3))
+console.log("Sum(1,2,3) =  " + Sum(1,2,3))
+console.log(Sum('ab','b','c'));
 
 //2.function with arguments
 function colorCar(color) {
@@ -42,8 +43,8 @@ function colorCar(color) {
 var person = {firstName:"Farshid", lastName:"Farjad", age:38, eyeColor:"black"};
 console.log(person);
 function printObject(object){
-  for (var properity in object) {
-    console.log("key => " + properity + ",  value => " + object[properity]);
+  for (var property in object) {
+    console.log("key => " + property + ",  value => " + object[property]);
   }
 }
 printObject(person);
@@ -61,7 +62,8 @@ console.log("vehicleType('red', 2) ===> " + vehicleType("red", 2));
 
 //5
 
-(3 === 3) ? console.log("yes") : console.log("no");
+// (3 === 3) ? console.log("yes") : console.log("no");
+console.log(3===3 ? "yes" : "no" )
 //console.log("yes")
 
 //6. Adding age attribute to vehicleType function
@@ -92,14 +94,48 @@ console.log("Third item of the list is: " + list[2]);
 
 //9
 function vehicle(color,code,age){
-        if(age > 1) {
-            console.log('a ' + color + ' used ' + list[code])
-        } else if(age <= 1) {
-            console.log('a ' + color + ' new ' + list[code])
-        } 
+  if ((code >= 0) && (code < list.length)){
+    if(age > 1) {
+      console.log('a ' + color + ' used ' + list[code]);
+    } else if (age <= 1) {
+      console.log('a ' + color + ' new ' + list[code]);
+    } else {
+        console.log("Out of Range age!!")
+      }list = ["motorbike", "caravan", "car", "bike", "bus"];
+      console.log("list = " + list);
+      
+      //8.Write third element of the list
+      console.log("Third item of the list is: " + list[2]);
+      
+      //9
+      function vehicle(color,code,age){
+        
+        if ((code >= 0) && (code < list.length)){
+          let str = 'a ' + color;
+          if(age > 1) {
+            str += ' used ' + list[code];
+          } else if (age <= 1) {
+            str += ' new ' + list[code];
+          }
+          console.log(str);
+
+        }
+        else {
+          console.log("We do not have such code!!!");
+        }
+      }
+      console.log("vehicle('green', 3, 1) ===>  " + vehicle("green", 3, 1));
+      vehicle("green", 3, 1);
+      vehicle("green", 30, 1);
+  }
+  else {
+    console.log("We do not have such code!!!");
+  }
 }
 console.log("vehicle('green', 3, 1) ===>  " + vehicle("green", 3, 1));
 vehicle("green", 3, 1);
+vehicle("green", 30, 1);
+
 
 //10. Advertisment using vehicle list
 //"Amazing Joe's Garage, we service cars, motorbikes, caravans and bikes.". (Hint: use a for loop.)
