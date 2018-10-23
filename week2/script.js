@@ -179,7 +179,7 @@ console.log(teacherObj);
 //15. Compare Array with  == and ===
 let x = [1,2,3];
 let y = [1,2,3];
-let z = y; // reference
+let z = y; // reference assigning
 x == y ? console.log("they are equal") : console.log("they are not equal!"); //they are not equal
 x === y ? console.log("they are equal") : console.log("they are not equal!");//they are not equal
 z == x ? console.log("they are equal") : console.log("they are not equal!");//they are not equal
