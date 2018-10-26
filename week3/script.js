@@ -37,7 +37,7 @@ function createUl(arr){
     }
 }
 
-createUl(bookNames);
+// createUl(bookNames);
 
 // books object
 let books = {
@@ -135,7 +135,7 @@ function viewBooks(obj) {
     }
 }
 
-viewBooks(books);
+// viewBooks(books);
 
 let booksCover = { 
     oca_oracle_certified_associate_java_se_8_programme:"./img/oca_oracle.jpg",
@@ -161,8 +161,8 @@ let booksCover = {
 
 //To view book imgage at the appropriate li
 function viewImages(obj){
-  console.log("calling viewImages function ");
-  console.log(obj);
+//   console.log("calling viewImages function ");
+//   console.log(obj);
   for (let i=0; i<Object.keys(obj).length; i++){
     let li = document.getElementById(Object.keys(obj)[i]);
     let img = document.createElement('img');
@@ -173,4 +173,4 @@ function viewImages(obj){
     }
   }
   
-viewImages(booksCover);
+// viewImages(booksCover);
