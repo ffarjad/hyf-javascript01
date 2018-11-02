@@ -108,7 +108,7 @@ let books = {
         title: "The road to learn React",
         language: "english",
         author: "Robin Wieruch"
-    },
+    }
 
 }
 
