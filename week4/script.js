@@ -77,5 +77,5 @@ console.log (filterDuration);
 
 let financial = changedDuration.map(changedDuration => changedDuration *= 30)
 let total = financial.reduce((total, amount) => total += amount);
-console.log(" Maartje should earn " + total + "€");
+console.log(" Maartje should earn " + total.toFixed(2) + "€");
 
