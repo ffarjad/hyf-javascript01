@@ -4,7 +4,7 @@
 const numbers = [1, 2, 3, 4];
 function doubleOddNumbers(arr) {
     const odd = arr.filter(obj => (obj % 2 !== 0));
-    newNumbers = odd.map(obj => obj*2)
+    let newNumbers = odd.map(obj => obj*2)
     return newNumbers;
 }
 console.log('The doubled numbers are', doubleOddNumbers(numbers));
