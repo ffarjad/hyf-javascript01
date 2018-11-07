@@ -144,3 +144,69 @@ printValuesOfArray(arr4d);
 //If it was not array print the variable
 
 //3.7
+
+const x = 9;
+function f1(val) {
+  val = val + 1;
+  return val;
+}
+f1(x);
+console.log(x);
+
+const y = { x: 9 };
+function f2(val) {
+  val.x = val.x + 1;
+  return val;
+}
+f2(y);
+console.log(y);
+
+//the f1 function receive a variable as an input parameter and it is passed by variable content
+//the f2 function reeive an object as an input parameter and it is passed by reference address
+
+
+//4
+function createBase(base) {
+    const innerFunction = function (number) {
+        return base + number;
+    };
+  
+    return innerFunction;
+  }
+  
+let addSix = createBase(6);
+console.log(addSix(10));
+console.log(addSix(21));
+
+//4.bonus
+//remove the repeated element in an Array
+const letters = ['a', 'b', 'c', 'd', 'a', 'e', 'f', 'c'];
+const numbers = [1, 2, 3, 4, 1, 5, 6, 3];
+
+function getUnique_set(arr){
+  return [... new Set(arr)];
+}
+
+function getUnique_forEach(arr){
+  let uniqeArray = [];
+  arr.forEach(element => {
+    if(!uniqeArray.includes(element)){
+      uniqeArray.push(element);
+    }
+  });
+  return uniqeArray;
+}
+//To test the time it takes with getUnique_set way
+console.time('timer');
+console.log(getUnique_set(numbers));
+console.timeEnd('timer');
+
+//To test the time it takes with ForEach way
+console.time('timer');
+console.log(getUnique_forEach(numbers));
+console.timeEnd('timer');
+
+const uniqueNumbers = getUnique_forEach(numbers);
+console.log(uniqueNumbers);
+const uniqueLetters = getUnique_forEach(letters);
+console.log(uniqueLetters);
