@@ -110,7 +110,7 @@ console.log(multiplyAll([[1,2],[3,4],[5,6,7]]));
 
 //working with multi dimentional array
 
-//3 dimArray
+//k(3,4) dimArray
 const arr4d =[
     [ [[1,2],[3]], [[4,5],[6]], [[7,8],[9]] ],
     [ [[10,11],[12]], [[13,14],[15]], [[16,17],[18]] ],
@@ -139,7 +139,7 @@ function printValuesOfArray(arr){
 // printValuesOfArray(arr3d);
 printValuesOfArray(arr4d);
 // console.log(arr3d);
-//I sed recursive call which test if the arr variable is a array or not firs.
+//I made a recursive call which test if the arr variable is a array or not firs.
 //If it was array call the function again
 //If it was not array print the variable
 
